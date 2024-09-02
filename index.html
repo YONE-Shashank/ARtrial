@@ -22,31 +22,46 @@
         <!-- Social Media Icons -->
         <a-entity position="0 -0.2 0"> <!-- Adjusted to ensure clear separation from main card -->
           <a-plane 
+            id="linkedin-icon" 
             src="./linkedin.png" 
             height="0.1" 
             width="0.1" 
             rotation="0 0 0" 
-            click-destination="url: https://github.com/YONE-Shashank/ARtrial"
-            position="-0.16 0 0"
-          ></a-plane>
+            position="-0.16 0 0">
+          </a-plane>
           <a-plane 
+            id="facebook-icon" 
             src="./facebook.png" 
             height="0.1" 
             width="0.1" 
             rotation="0 0 0" 
-            click-destination="url: https://www.facebook.com/your-company-handle"
-            position="0 0 0"
-          ></a-plane>
+            position="0 0 0">
+          </a-plane>
           <a-plane 
+            id="insta-icon" 
             src="./insta.png" 
             height="0.1" 
             width="0.1" 
             rotation="0 0 0" 
-            click-destination="url: https://www.instagram.com/your-company-handle"
-            position="0.16 0 0"
-          ></a-plane>
+            position="0.16 0 0">
+          </a-plane>
         </a-entity>
       </a-entity>
     </a-scene>
+
+    <script>
+      // Add click event listeners to each icon
+      document.querySelector('#linkedin-icon').addEventListener('click', function () {
+        window.open('https://github.com/YONE-Shashank/ARtrial', '_blank');
+      });
+
+      document.querySelector('#facebook-icon').addEventListener('click', function () {
+        window.open('https://github.com/YONE-Shashank/ARtrial', '_blank');
+      });
+
+      document.querySelector('#insta-icon').addEventListener('click', function () {
+        window.open('https://github.com/YONE-Shashank/ARtrial', '_blank');
+      });
+    </script>
   </body>
 </html>

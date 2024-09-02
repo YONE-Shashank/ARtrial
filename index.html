@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-entity mindar-image-target="targetIndex: 0">
+        <!-- Main Card -->
+        <a-plane 
+          src="./main.jpg" 
+          position="0 0 0" 
+          height="0.276" 
+          width="0.5" 
+          rotation="0 0 0" 
+          scale="0 0 0" 
+          animation="property: scale; to: 1 1 1; easing: easeOutElastic; dur: 1000"
+        ></a-plane>
+
+        <!-- Social Media Icons -->
+        <a-entity position="0 -0.3 0"> <!-- Adjusted vertical position closer to main card -->
+          <a-plane 
+            src="./linkedin.png" 
+            height="0.1" 
+            width="0.1" 
+            rotation="0 0 0" 
+            click-destination="url: https://www.linkedin.com/company/your-company-handle"
+            position="-0.1 0 0"  
+          ></a-plane>
+          <a-plane 
+            src="./facebook.png" 
+            height="0.1" 
+            width="0.1" 
+            rotation="0 0 0" 
+            click-destination="url: https://www.facebook.com/your-company-handle"
+            position="0 0 0"  
+          ></a-plane>
+          <a-plane 
+            src="./insta.png" 
+            height="0.1" 
+            width="0.1" 
+            rotation="0 0 0" 
+            click-destination="url: https://www.instagram.com/your-company-handle"
+            position="0.1 0 0"  
+          ></a-plane>
+        </a-entity>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
